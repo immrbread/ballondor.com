@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ballon d'Or 2026</title>
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            #263b65 0%,
+            #0b1020 42%,
+            #060a12 100%
+        );
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+
+    height: 70px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background:
+        rgba(7, 11, 22, 0.78);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+
+.logo span {
+
+    color: #ffc344;
+}
+
+
+.nav-right {
+
+    color: #8490a7;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 450px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px 45px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+
+    height: 520px;
+
+    border-radius: 50%;
+
+    background: #e6a52b;
+
+    opacity: 0.08;
+
+    filter: blur(90px);
+}
+
+
+.trophy {
+
+    position: relative;
+
+    font-size: 78px;
+
+    filter:
+        drop-shadow(
+            0 15px 30px
+            rgba(255,190,40,0.25)
+        );
+}
+
+
+.hero h1 {
+
+    position: relative;
+
+    margin-top: 20px;
+
+    font-size:
+        clamp(42px, 8vw, 82px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ffd66a,
+            #ffffff
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+.hero p {
+
+    position: relative;
+
+    margin-top: 20px;
+
+    color: #8c98ae;
+
+    font-size: 14px;
+}
+
+
+.year {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,190,45,0.1);
+
+    border:
+        1px solid rgba(255,190,45,0.25);
+
+    color: #ffc344;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    width: min(1150px, 92%);
+
+    margin: auto;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.section-header h2 {
+
+    font-size: 24px;
+}
+
+
+.section-header span {
+
+    color: #758198;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   TOP 3
+========================================= */
+
+.top-three {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.15fr 1fr;
+
+    gap: 15px;
+
+    align-items: end;
+}
+
+
+.top-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 390px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1a2947,
+            #0b1221
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    transition: 0.3s;
+}
+
+
+.top-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(255,195,60,0.45);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.4);
+}
+
+
+.top-card.first {
+
+    min-height: 440px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #263c67,
+            #0b1425
+        );
+
+    border-color:
+        rgba(255,195,60,0.3);
+}
+
+
+.player-image {
+
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: cover;
+
+    object-position: top center;
+
+    display: block;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 58%,
+            transparent 100%
+        );
+}
+
+
+.first .player-image {
+
+    height: 315px;
+}
+
+
+.rank {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(7,12,24,0.82);
+
+    border:
+        1px solid rgba(255,195,60,0.45);
+
+    color: #ffc344;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    z-index: 2;
+}
+
+
+.player-info {
+
+    position: relative;
+
+    padding:
+        0 20px 20px;
+
+    margin-top: -35px;
+}
+
+
+.player-info h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 6px;
+}
+
+
+.player-info p {
+
+    color: #8995ad;
+
+    font-size: 12px;
+}
+
+
+.rating {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,190,45,0.1);
+
+    border:
+        1px solid rgba(255,190,45,0.2);
+
+    color: #ffc344;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   NOMINEES
+========================================= */
+
+.nominees-section {
+
+    margin-top: 55px;
+}
+
+
+.search {
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    background:
+        rgba(255,255,255,0.04);
+
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.search:focus {
+
+    border-color:
+        rgba(255,195,60,0.4);
+}
+
+
+.search::placeholder {
+
+    color: #66738b;
+}
+
+
+.nominees {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+
+.nominee {
+
+    min-height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 14px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,0.035);
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    transition: 0.25s;
+}
+
+
+.nominee:hover {
+
+    background:
+        rgba(255,190,45,0.07);
+
+    border-color:
+        rgba(255,190,45,0.25);
+
+    transform: translateX(4px);
+}
+
+
+.nominee-number {
+
+    width: 35px;
+
+    color: #ffc344;
+
+    font-size: 13px;
+
+    font-weight: 900;
+}
+
+
+.nominee img {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 14px;
+
+    object-fit: cover;
+
+    object-position: top center;
+
+    background: #172238;
+
+    flex-shrink: 0;
+}
+
+
+.nominee-info {
+
+    flex: 1;
+}
+
+
+.nominee-info h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.nominee-info p {
+
+    color: #77849c;
+
+    font-size: 10px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   WINNER PERCENTAGE
+========================================= */
+
+.winner-label {
+
+    color: #7d8ba4;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 4px;
+}
+
+
+.percentage-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.percentage-bar {
+
+    width: 90px;
+
+    height: 5px;
+
+    background: #1b263c;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+
+.percentage-fill {
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d89522,
+            #ffd45e
+        );
+
+    border-radius: 999px;
+}
+
+
+.percentage {
+
+    color: #ffc344;
+
+    font-size: 10px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================
+   LEGENDS
+========================================= */
+
+.legends-section {
+
+    margin-top: 65px;
+
+    padding-bottom: 70px;
+}
+
+
+.legends-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 13px;
+}
+
+
+.legend-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 300px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1a243b,
+            #0c1322
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    transition: 0.25s;
+}
+
+
+.legend-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(255,190,45,0.4);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.3);
+}
+
+
+.legend-card img {
+
+    width: 100%;
+
+    height: 210px;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: top center;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 60%,
+            transparent 100%
+        );
+}
+
+
+.legend-info {
+
+    position: relative;
+
+    padding:
+        0 15px 16px;
+
+    margin-top: -35px;
+}
+
+
+.legend-number {
+
+    color: #ffbd36;
+
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+
+.legend-info h3 {
+
+    margin: 5px 0 4px;
+
+    font-size: 19px;
+}
+
+
+.legend-info p {
+
+    margin: 0;
+
+    color: #8995ad;
+
+    font-size: 11px;
+}
+
+
+.legend-awards {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 7px 10px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,190,45,0.1);
+
+    border:
+        1px solid rgba(255,190,45,0.18);
+
+    color: #ffc344;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+
+    color: #56637a;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width: 800px) {
+
+    .top-three {
+
+        grid-template-columns: 1fr;
+    }
+
+    .top-card,
+    .top-card.first {
+
+        min-height: 360px;
+    }
+
+    .player-image,
+    .first .player-image {
+
+        height: 260px;
+    }
+
+    .nominees {
+
+        grid-template-columns: 1fr;
+    }
+
+    .legends-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media(max-width: 550px) {
+
+    nav {
+
+        padding: 0 5%;
+    }
+
+    .nav-right {
+
+        display: none;
+    }
+
+    .hero {
+
+        min-height: 390px;
+    }
+
+    .hero h1 {
+
+        letter-spacing: -2px;
+    }
+
+    .legends-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .legend-card {
+
+        min-height: 270px;
+    }
+
+    .legend-card img {
+
+        height: 190px;
+    }
+
+    .nominee img {
+
+        width: 55px;
+
+        height: 55px;
+    }
+
+    .percentage-bar {
+
+        width: 65px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<nav>
+
+    <div class="logo">
+        BALLON<span>D'OR</span>
+    </div>
+
+    <div class="nav-right">
+        2026 RANKINGS
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="trophy">
+        🏆
+    </div>
+
+    <h1>
+        BALLON D'OR
+    </h1>
+
+    <p>
+        2026 Men's Ballon d'Or Rankings
+    </p>
+
+    <div class="year">
+        2026 EDITION
+    </div>
+
+</section>
+
+
+
+<div class="container">
+
+
+<!-- =========================================
+     TOP 3
+========================================= -->
+
+<section>
+
+    <div class="section-header">
+
+        <h2>
+            🏆 Top 3
+        </h2>
+
+        <span>
+            My Ranking
+        </span>
+
+    </div>
+
+
+    <div class="top-three">
+
+
+        <!-- #2 MBAPPE -->
+
+        <div class="top-card">
+
+            <div class="rank">
+                02
+            </div>
+
+            <img
+                class="player-image"
+                data-player="Kylian Mbappé"
+                src=""
+                alt="Kylian Mbappé"
+            >
+
+            <div class="player-info">
+
+                <h3>
+                    Kylian Mbappé
+                </h3>
+
+                <p>
+                    🇫🇷 France · Real Madrid
+                </p>
+
+                <div class="rating">
+                    POSSIBLE WINNER · 25%
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- #1 YAMAL -->
+
+        <div class="top-card first">
+
+            <div class="rank">
+                01
+            </div>
+
+            <img
+                class="player-image"
+                data-player="Lamine Yamal"
+                src=""
+                alt="Lamine Yamal"
+            >
+
+            <div class="player-info">
+
+                <h3>
+                    Lamine Yamal
+                </h3>
+
+                <p>
+                    🇪🇸 Spain · Barcelona
+                </p>
+
+                <div class="rating">
+                    🥇 POSSIBLE WINNER · 32%
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- #3 KANE -->
+
+        <div class="top-card">
+
+            <div class="rank">
+                03
+            </div>
+
+            <img
+                class="player-image"
+                data-player="Harry Kane"
+                src=""
+                alt="Harry Kane"
+            >
+
+            <div class="player-info">
+
+                <h3>
+                    Harry Kane
+                </h3>
+
+                <p>
+                    🏴 England · Bayern München
+                </p>
+
+                <div class="rating">
+                    POSSIBLE WINNER · 16%
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NOMINEES
+========================================= -->
+
+<section class="nominees-section">
+
+    <div class="section-header">
+
+        <h2>
+            ⭐ 2026 Nominees
+        </h2>
+
+        <span>
+            30 Players
+        </span>
+
+    </div>
+
+
+    <input
+        id="search"
+        class="search"
+        type="text"
+        placeholder="Search for a player..."
+    >
+
+
+    <div
+        id="nominees"
+        class="nominees"
+    ></div>
+
+</section>
+
+
+
+<!-- =========================================
+     LEGENDS
+========================================= -->
+
+<section class="legends-section">
+
+    <div class="section-header">
+
+        <h2>
+            👑 Ballon d'Or Legends
+        </h2>
+
+        <span>
+            All-Time Greats
+        </span>
+
+    </div>
+
+
+    <div class="legends-grid">
+
+
+        <!-- MESSI -->
+
+        <div class="legend-card">
+
+            <img
+                data-legend="Lionel Messi"
+                src=""
+                alt="Lionel Messi"
+            >
+
+            <div class="legend-info">
+
+                <span class="legend-number">
+                    01
+                </span>
+
+                <h3>
+                    Lionel Messi
+                </h3>
+
+                <p>
+                    🇦🇷 Argentina · Inter Miami
+                </p>
+
+                <div class="legend-awards">
+                    🏆 8× Ballon d'Or
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CRISTIANO RONALDO -->
+
+        <div class="legend-card">
+
+            <img
+                data-legend="Cristiano Ronaldo"
+                src=""
+                alt="Cristiano Ronaldo"
+            >
+
+            <div class="legend-info">
+
+                <span class="legend-number">
+                    02
+                </span>
+
+                <h3>
+                    Cristiano Ronaldo
+                </h3>
+
+                <p>
+                    🇵🇹 Portugal · Al-Nassr
+                </p>
+
+                <div class="legend-awards">
+                    🏆 5× Ballon d'Or
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RONALDINHO -->
+
+        <div class="legend-card">
+
+            <img
+                data-legend="Ronaldinho"
+                src=""
+                alt="Ronaldinho"
+            >
+
+            <div class="legend-info">
+
+                <span class="legend-number">
+                    03
+                </span>
+
+                <h3>
+                    Ronaldinho
+                </h3>
+
+                <p>
+                    🇧🇷 Brazil
+                </p>
+
+                <div class="legend-awards">
+                    🏆 1× Ballon d'Or
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ZIDANE -->
+
+        <div class="legend-card">
+
+            <img
+                data-legend="Zinedine Zidane"
+                src=""
+                alt="Zinedine Zidane"
+            >
+
+            <div class="legend-info">
+
+                <span class="legend-number">
+                    04
+                </span>
+
+                <h3>
+                    Zinedine Zidane
+                </h3>
+
+                <p>
+                    🇫🇷 France
+                </p>
+
+                <div class="legend-awards">
+                    🏆 1× Ballon d'Or
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- R9 -->
+
+        <div class="legend-card">
+
+            <img
+                data-legend="Ronaldo Nazário"
+                src=""
+                alt="Ronaldo Nazário"
+            >
+
+            <div class="legend-info">
+
+                <span class="legend-number">
+                    05
+                </span>
+
+                <h3>
+                    Ronaldo Nazário
+                </h3>
+
+                <p>
+                    🇧🇷 Brazil
+                </p>
+
+                <div class="legend-awards">
+                    🏆 2× Ballon d'Or
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MODRIC -->
+
+        <div class="legend-card">
+
+            <img
+                data-legend="Luka Modrić"
+                src=""
+                alt="Luka Modrić"
+            >
+
+            <div class="legend-info">
+
+                <span class="legend-number">
+                    06
+                </span>
+
+                <h3>
+                    Luka Modrić
+                </h3>
+
+                <p>
+                    🇭🇷 Croatia
+                </p>
+
+                <div class="legend-awards">
+                    🏆 1× Ballon d'Or
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    BALLON D'OR 2026 · Fan-made website
+
+</footer>
+
+
+
+<script>
+
+/* =========================================
+   2026 NOMINEES
+========================================= */
+
+const players = [
+
+    {
+        rank: 1,
+        name: "Lamine Yamal",
+        country: "🇪🇸 Spain",
+        club: "Barcelona",
+        percentage: 32,
+        wiki: "Lamine_Yamal"
+    },
+
+    {
+        rank: 2,
+        name: "Kylian Mbappé",
+        country: "🇫🇷 France",
+        club: "Real Madrid",
+        percentage: 25,
+        wiki: "Kylian_Mbappé"
+    },
+
+    {
+        rank: 3,
+        name: "Harry Kane",
+        country: "🏴 England",
+        club: "Bayern München",
+        percentage: 16,
+        wiki: "Harry_Kane"
+    },
+
+    {
+        rank: 4,
+        name: "Ousmane Dembélé",
+        country: "🇫🇷 France",
+        club: "Paris Saint-Germain",
+        percentage: 7,
+        wiki: "Ousmane_Dembélé"
+    },
+
+    {
+        rank: 5,
+        name: "Vitinha",
+        country: "🇵🇹 Portugal",
+        club: "Paris Saint-Germain",
+        percentage: 5,
+        wiki: "Vitinha_(footballer,_born_2000)"
+    },
+
+    {
+        rank: 6,
+        name: "Jude Bellingham",
+        country: "🏴 England",
+        club: "Real Madrid",
+        percentage: 3,
+        wiki: "Jude_Bellingham"
+    },
+
+    {
+        rank: 7,
+        name: "Vinícius Júnior",
+        country: "🇧🇷 Brazil",
+        club: "Real Madrid",
+        percentage: 2.5,
+        wiki: "Vinícius_Júnior"
+    },
+
+    {
+        rank: 8,
+        name: "Achraf Hakimi",
+        country: "🇲🇦 Morocco",
+        club: "Paris Saint-Germain",
+        percentage: 2,
+        wiki: "Achraf_Hakimi"
+    },
+
+    {
+        rank: 9,
+        name: "Erling Haaland",
+        country: "🇳🇴 Norway",
+        club: "Manchester City",
+        percentage: 1.5,
+        wiki: "Erling_Haaland"
+    },
+
+    {
+        rank: 10,
+        name: "Rodri",
+        country: "🇪🇸 Spain",
+        club: "Manchester City / Barcelona",
+        percentage: 1,
+        wiki: "Rodri_(footballer,_born_1996)"
+    },
+
+    {
+        rank: 11,
+        name: "Michael Olise",
+        country: "🇫🇷 France",
+        club: "Bayern München",
+        percentage: 0.7,
+        wiki: "Michael_Olise"
+    },
+
+    {
+        rank: 12,
+        name: "Khvicha Kvaratskhelia",
+        country: "🇬🇪 Georgia",
+        club: "Paris Saint-Germain",
+        percentage: 0.6,
+        wiki: "Khvicha_Kvaratskhelia"
+    },
+
+    {
+        rank: 13,
+        name: "Declan Rice",
+        country: "🏴 England",
+        club: "Arsenal",
+        percentage: 0.5,
+        wiki: "Declan_Rice"
+    },
+
+    {
+        rank: 14,
+        name: "William Saliba",
+        country: "🇫🇷 France",
+        club: "Arsenal",
+        percentage: 0.4,
+        wiki: "William_Saliba"
+    },
+
+    {
+        rank: 15,
+        name: "Nuno Mendes",
+        country: "🇵🇹 Portugal",
+        club: "Paris Saint-Germain",
+        percentage: 0.4,
+
+        /* DIRECT WIKIMEDIA COMMONS IMAGE */
+        image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Nuno_Mendes_Croatia_v_Portugal_2_July_2026-135.jpg/500px-Nuno_Mendes_Croatia_v_Portugal_2_July_2026-135.jpg",
+
+        wiki: "Nuno_Mendes"
+    },
+
+    {
+        rank: 16,
+        name: "Luis Díaz",
+        country: "🇨🇴 Colombia",
+        club: "Bayern München",
+        percentage: 0.3,
+        wiki: "Luis_Díaz_(footballer,_born_1997)"
+    },
+
+    {
+        rank: 17,
+        name: "Bruno Fernandes",
+        country: "🇵🇹 Portugal",
+        club: "Manchester United",
+        percentage: 0.3,
+        wiki: "Bruno_Fernandes"
+    },
+
+    {
+        rank: 18,
+        name: "Lautaro Martínez",
+        country: "🇦🇷 Argentina",
+        club: "Inter",
+        percentage: 0.2,
+        wiki: "Lautaro_Martínez"
+    },
+
+    {
+        rank: 19,
+        name: "Fabián Ruiz",
+        country: "🇪🇸 Spain",
+        club: "Paris Saint-Germain",
+        percentage: 0.15,
+        wiki: "Fabián_Ruiz"
+    },
+
+    {
+        rank: 20,
+        name: "Gabriel",
+        country: "🇧🇷 Brazil",
+        club: "Arsenal",
+        percentage: 0.1,
+        wiki: "Gabriel_Magalhães"
+    },
+
+    {
+        rank: 21,
+        name: "Pau Cubarsí",
+        country: "🇪🇸 Spain",
+        club: "Barcelona",
+        percentage: 0.1,
+        wiki: "Pau_Cubarsí"
+    },
+
+    {
+        rank: 22,
+        name: "Marquinhos",
+        country: "🇧🇷 Brazil",
+        club: "Paris Saint-Germain",
+        percentage: 0.1,
+        wiki: "Marquinhos"
+    },
+
+    {
+        rank: 23,
+        name: "Lionel Messi",
+        country: "🇦🇷 Argentina",
+        club: "Inter Miami",
+        percentage: 0.1,
+        wiki: "Lionel_Messi"
+    },
+
+    {
+        rank: 24,
+        name: "João Neves",
+        country: "🇵🇹 Portugal",
+        club: "Paris Saint-Germain",
+        percentage: 0.08,
+        wiki: "João_Neves"
+    },
+
+    {
+        rank: 25,
+        name: "Dayot Upamecano",
+        country: "🇫🇷 France",
+        club: "Paris Saint-Germain",
+        percentage: 0.05,
+        wiki: "Dayot_Upamecano"
+    },
+
+    {
+        rank: 26,
+        name: "Willian Pacho",
+        country: "🇪🇨 Ecuador",
+        club: "Paris Saint-Germain",
+        percentage: 0.04,
+        wiki: "Willian_Pacho"
+    },
+
+    {
+        rank: 27,
+        name: "Ferran Torres",
+        country: "🇪🇸 Spain",
+        club: "Barcelona / Paris Saint-Germain",
+        percentage: 0.03,
+        wiki: "Ferran_Torres"
+    },
+
+    {
+        rank: 28,
+        name: "Marc Cucurella",
+        country: "🇪🇸 Spain",
+        club: "Chelsea / Real Madrid",
+        percentage: 0.03,
+        wiki: "Marc_Cucurella"
+    },
+
+    {
+        rank: 29,
+        name: "Sadio Mané",
+        country: "🇸🇳 Senegal",
+        club: "Al-Nassr",
+        percentage: 0.02,
+        wiki: "Sadio_Mané"
+    },
+
+    {
+        rank: 30,
+        name: "Julián Quiñones",
+        country: "🇲🇽 Mexico",
+        club: "Al-Qadsiah",
+        percentage: 0.02,
+        wiki: "Julián_Quiñones"
+    }
+
+];
+
+
+/* =========================================
+   FALLBACK IMAGE
+========================================= */
+
+const fallback =
+    "https://placehold.co/300x300/172238/ffffff?text=⚽";
+
+
+/* =========================================
+   GET WIKIPEDIA IMAGE
+========================================= */
+
+async function getWikipediaImage(title) {
+
+    try {
+
+        const url =
+            "https://en.wikipedia.org/api/rest_v1/page/summary/"
+            + encodeURIComponent(title);
+
+        const response =
+            await fetch(url);
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Image not found"
+            );
+
+        }
+
+        const data =
+            await response.json();
+
+        if (
+            data.thumbnail &&
+            data.thumbnail.source
+        ) {
+
+            return data.thumbnail.source;
+
+        }
+
+    }
+
+    catch (error) {
+
+        console.log(
+            "Could not load:",
+            title
+        );
+
+    }
+
+    return fallback;
+}
+
+
+/* =========================================
+   LOAD TOP 3
+========================================= */
+
+async function loadTopThree() {
+
+    const images =
+        document.querySelectorAll(
+            "[data-player]"
+        );
+
+    for (const image of images) {
+
+        const name =
+            image.dataset.player;
+
+        const player =
+            players.find(
+                p => p.name === name
+            );
+
+        if (!player) continue;
+
+
+        /* Use direct image if available */
+
+        if (player.image) {
+
+            image.src =
+                player.image;
+
+            continue;
+        }
+
+
+        image.src =
+            await getWikipediaImage(
+                player.wiki
+            );
+
+    }
+
+}
+
+
+/* =========================================
+   CREATE NOMINEE CARD
+========================================= */
+
+function createNominee(player) {
+
+    const card =
+        document.createElement("div");
+
+    card.className =
+        "nominee";
+
+
+    let imageSource =
+        player.image || fallback;
+
+
+    card.innerHTML = `
+
+        <div class="nominee-number">
+            ${String(player.rank).padStart(2, "0")}
+        </div>
+
+        <img
+            class="nominee-photo"
+            src="${imageSource}"
+            alt="${player.name}"
+        >
+
+        <div class="nominee-info">
+
+            <h3>
+                ${player.name}
+            </h3>
+
+            <p>
+                ${player.country} · ${player.club}
+            </p>
+
+            <div class="winner-label">
+                Possible Ballon d'Or Winner
+            </div>
+
+            <div class="percentage-row">
+
+                <div class="percentage-bar">
+
+                    <div
+                        class="percentage-fill"
+                        style="width:${Math.min(player.percentage,100)}%"
+                    ></div>
+
+                </div>
+
+                <span class="percentage">
+                    ${player.percentage}%
+                </span>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    /* If there is no direct image,
+       use Wikipedia */
+
+    if (!player.image) {
+
+        const image =
+            card.querySelector(
+                ".nominee-photo"
+            );
+
+        getWikipediaImage(
+            player.wiki
+        ).then(src => {
+
+            image.src = src;
+
+        });
+
+    }
+
+
+    return card;
+}
+
+
+/* =========================================
+   DISPLAY PLAYERS
+========================================= */
+
+function displayPlayers(list) {
+
+    const container =
+        document.getElementById(
+            "nominees"
+        );
+
+    container.innerHTML = "";
+
+
+    list.forEach(player => {
+
+        container.appendChild(
+            createNominee(player)
+        );
+
+    });
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+const search =
+    document.getElementById(
+        "search"
+    );
+
+
+search.addEventListener(
+    "input",
+    function() {
+
+        const query =
+            search.value
+                .toLowerCase()
+                .trim();
+
+
+        const filtered =
+            players.filter(
+                player => {
+
+                    return (
+
+                        player.name
+                            .toLowerCase()
+                            .includes(query)
+
+                        ||
+
+                        player.club
+                            .toLowerCase()
+                            .includes(query)
+
+                        ||
+
+                        player.country
+                            .toLowerCase()
+                            .includes(query)
+
+                    );
+
+                }
+            );
+
+
+        displayPlayers(filtered);
+
+    }
+);
+
+
+/* =========================================
+   LOAD LEGENDS
+========================================= */
+
+async function loadLegends() {
+
+    const images =
+        document.querySelectorAll(
+            "[data-legend]"
+        );
+
+
+    for (const image of images) {
+
+        const name =
+            image.dataset.legend;
+
+
+        let wikiTitle =
+            name;
+
+
+        if (
+            name === "Ronaldo Nazário"
+        ) {
+
+            wikiTitle =
+                "Ronaldo_(Brazilian_footballer)";
+
+        }
+
+
+        const src =
+            await getWikipediaImage(
+                wikiTitle
+            );
+
+
+        image.src = src;
+
+    }
+
+}
+
+
+/* =========================================
+   START WEBSITE
+========================================= */
+
+displayPlayers(players);
+
+loadTopThree();
+
+loadLegends();
+
+</script>
+
+
+</body>
+
+</html>
